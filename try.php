@@ -87,7 +87,6 @@ $conn->close();
                 </form>
             </div>
         </section>
-        
     </div>
     <footer>
         <div class="container">

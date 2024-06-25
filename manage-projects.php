@@ -1,3 +1,8 @@
+<?php
+include('config.php'); // Include the database connection
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +26,40 @@
             </div>
         </header>
 
-        <section id="manage-hobbies" class="section-padding">
+        <section id="manage-projects" class="section-padding">
             <div class="container">
+                
                 <h2>Manage Projects</h2>
-                <!-- Example hobbies card (replace with dynamic content) -->
-                <div class="hobbies-card">
-                    <h2>1</h2>
-                    <h4>Project 1</h4>
-                    <p>This is a description of Project 1.</p>
-                    <img src="hobbies1.jpg" alt="Hobbies 1">
-                </div>
-                <!-- Add more hobbies cards as needed -->
+                <?php
+                // Fetch projects data
+                $sql = "SELECT * FROM projects";
+                $result = $conn->query($sql);
+
+                $projects = [];
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $id = $row["Project_ID"];
+                        $title = $row["Project_Title"];
+                        $description = $row["Project_Desc"];
+                        $img = $row["Project_Img"];
+
+                        echo '<div class="project-card">
+                <div class="action-icons">
+                        <form><button class="delete-icon"><i class="fas fa-trash-alt"></i></button></form>
+                        <form action="edit-projects.php?editprojectid='.$id.'" method="post"><button type="submit" name="edit" class="edit-icon"><i class="fas fa-edit"></i></button></form>
+                    </div>
+                    <h2>'.$id.'</h2>
+                    <h4>'.$title.'</h4>
+                    <p>'.$description.'</p>
+                    <img src="uploads/'.$img.'" alt="Hobbies 1">
+                </div>'
+                        ;
+
+                    }
+                }
+
+                ?>
+
             </div>
         </section>
 

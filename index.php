@@ -73,7 +73,7 @@ include('config.php'); // Include the database connection
 
                         echo '
                         <div class="project">
-                    <img src="'.$img.'" alt="gorilla">
+                    <img src="uploads/'.$img.'" alt="gorilla">
                     <h3>'.$title.'</h3>
                     <p><i class="fa fa-minus"></i>'.$description.'</p>
                 </div>  ' ;
