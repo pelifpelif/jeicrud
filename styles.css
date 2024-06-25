@@ -1,0 +1,646 @@
+@font-face {
+    font-family: 'Pixel';
+    src:url(uploads/PixelifySans-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: 'PixelNormal';
+    src:url(uploads/PixelifySans-Regular.ttf)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #6626FF;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#logo {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* slide transitions */
+}
+
+#logo:hover {
+    transform: scale(1.7); 
+    color:#222044; 
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+    position:relative;
+    font-family: 'Pixel';
+    font-size: 16px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease; /* slide transitions */
+}
+
+header nav ul li a:hover {
+    transform: scale(1.150); /* Increase size on hover */
+    color: #222044; /* Change color on hover */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: fixed;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #6626FF;
+    color: #222044;
+}
+
+header nav ul li a.edit-btn {
+    background-color: #e184bd;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+header nav ul li a.edit-btn:hover {
+    background-color: #a42874;
+    color: white;
+}
+
+#edit-projects {
+    padding: 2rem 0;
+}
+
+#hero {
+    background: url('uploads/pastel\ lime.png') no-repeat center center/cover;
+    color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+}
+
+#hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-top: 70px;
+    margin-left: 80px;
+    width: 80%;
+    transform: scaleX(-1);
+}
+
+.hero-image img {
+    max-width: 50%;
+    height: 10%;
+    border-radius: 20%;
+}
+
+.section-padding {
+    padding: 2rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Pixel';
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: 'Pixel';
+    padding-right: 20px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+    font-family: 'PixelNormal';
+    font-size: 30px;
+}
+
+h4 {
+    color: white;
+    font-family: 'PixelNormal';
+    font-size: 2rem;
+    padding-right: 20px;
+    text-shadow: 3px 3px 3px black;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    padding-right: 20px;
+    font-family: 'PixelNormal';
+    font-size: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    background-color: #222044;
+    border: 4px solid #6626FF;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    margin-bottom: 1rem;
+}
+
+.project p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'PixelNormal';
+}
+
+.about-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-box {
+    background-color: #222044;
+    border: 4px solid #6626FF;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.about-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    margin-bottom: 1rem;
+}
+
+.about-box p {
+    font-family: 'PixelNormal';
+}
+
+.profile-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile-box {
+    background-color: #222044;
+    border: 4px solid #6626FF;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.profile-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    margin-bottom: 1rem;
+}
+
+.profile-box p {
+    font-family: 'PixelNormal';
+}
+
+.quote-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    margin-bottom: 1rem;
+}
+
+.quote-box p {
+    font-family: 'PixelNormal';
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.contact-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.contact-box {
+    background-color: #222044;
+    border: 4px solid #6626FF;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 45%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.contact-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    margin-bottom: 1rem;
+}
+
+.contact-box p {
+    font-family: 'PixelNormal';
+    justify-content: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    padding: 2px;
+}
+
+/* Style for the dropdown button */
+.dropbtn {
+    color: white;
+    padding: 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropbtn:hover {
+    background-color: #6626FF;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chicken {
+    width: 100%;
+    height: 115px;
+    z-index: 1;
+}
+
+.chickengif {
+    width: 100px;
+    height: 120px;
+    animation: linear infinite 8s SlideIn;
+}
+
+.cloud-container {
+    position: absolute;
+    top: -100;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+    overflow: hidden; /* Prevent the cloud from appearing outside the container */
+}
+
+.cloud {
+    position: absolute;
+    top: 50px; /* Adjust this value to position the cloud vertically */
+    width: 200px; /* Adjust this value to change the cloud size */
+    height: 100px; /* Adjust this value to change the cloud size */
+    background: url('images/cloud.gif') no-repeat center;
+    background-size: contain;
+    animation: moveCloud 25s linear infinite;
+}
+
+@keyframes moveCloud {
+    0% {
+        transform: translateX(-500px); /* Start outside the left side */
+    }
+    100% {
+        transform: translateX(300vw); /* Move to the right side */
+    }
+}
+
+.cloud2 {
+    top: 500px; /* Adjust this value to position the second cloud lower than the first */
+    width: 150px; /* Adjust this value to change the cloud size */
+    height: 100px; /* Adjust this value to change the cloud size */
+    background: url('images/cloud.gif') no-repeat center;
+    background-size: contain;
+    animation: moveCloud2 25s linear infinite; /* Different speed for variety */
+}
+
+@keyframes moveCloud2 {
+    0% {
+        transform: translateX(300vw); /* Start outside the right side */
+    }
+    100% {
+        transform: translateX(-500px); /* Move to the left side */
+    }
+}
+
+@keyframes SlideIn {
+    0% {
+        transform: translate(92vw, 0) rotateY(180deg);
+    }
+    50% {
+        transform: translate(0, 0) rotateY(180deg);
+    }
+    51% {
+        transform: translate(0, 0) rotateY(0);
+    }
+    100% {
+        transform: translate(92vw, 0) rotateY(0);
+    }
+}
+
+
+footer {
+    background-color: #6626FF;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(uploads/pixelbg.png);
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Adds space between the boxes */
+}
+
+.small-box{
+    background-color: #222044;
+    border: 4px solid #6626FF;
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.small-box {
+    width: calc(22% - 20px); /* Adjust width to fit 4 small boxes in a row with gaps */
+    font-family: 'PixelNormal';
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.small-box:hover {
+    background-color: #754fd1; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+.project-card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #222044;
+    border: 4px solid #6626FF
+}
+
+.project-card .action-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.project-card .action-icons i {
+    margin-left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.project-card .action-icons .delete-icon {
+    color: red; /* Red color for delete icon */
+}
+.project-card .action-icons .edit-icon {
+    color: #fff; /* White color for edit icon */
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.hobbies-card {
+    border: 4px solid #6626FF;
+    background-color: #222044;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+.hobbies-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+input[type=text] {
+    border: 4px solid #6626FF;
+    background-color: #222044;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    color: white;
+    width: 40%;
+}
+
+::placeholder {
+    color:white;
+    font-family: 'PixelNormal';
+}
+
+.image-button {
+    border: 4px solid #6626FF;
+    background-color: #222044;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    font-family: 'PixelNormal';
+    color: white;
+    transition: 0.3s ease;
+}
+
+.image-button:hover {
+    background-color: #754fd1; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.add-button {
+    border: 4px solid #6626FF;
+    background-color: #222044;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 330px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    font-family: 'PixelNormal';
+    color: white;
+    transition: 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #754fd1; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.contact-button {
+    border: 4px solid #6626FF;
+    background-color: #222044;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    font-family: 'PixelNormal';
+    color: white;
+    transition: 0.3s ease;
+    margin-left: 464px;
+}
+
+.contact-button:hover {
+    background-color: #754fd1; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
